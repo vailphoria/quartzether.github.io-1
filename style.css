@@ -85,10 +85,6 @@ header .container {
 	align-items: center;
 }
 
-.push {
-	height: calc(100vh - 847px);
-}
-
 .work-bar {
 	background-color: #fff;
 	width: 100%;
@@ -114,6 +110,7 @@ nav li {
 
 .works {
 	width: 100%;
+	height: calc(100vh - 225px);
 	position: relative;
 	background-color: rgb(241, 241, 241);
 	/* background-color: red; */
