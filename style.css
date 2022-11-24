@@ -68,6 +68,11 @@ h2 {
 	z-index: 2;
 	position: relative;
 	top: 175px;
+
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px;
 }
 
 
@@ -183,6 +188,10 @@ footer {
 	color: #fff;
 	height: 50px;
 	background-color: #000;
+}
+
+footer, .push {
+	clear: both;
 }
 
 footer .container {
