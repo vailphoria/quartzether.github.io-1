@@ -39,13 +39,13 @@ a {
 }
 
 a:hover {
-	color: rgb(12, 38, 87);
+	color: rgb(9, 26, 58);
 	background-color: rgb(211, 241, 255);
 }
 
 a.selected {
-	color: rgb(12, 38, 87);
-	background-color: rgb(126, 60, 248);
+	color: rgb(9, 26, 58);
+	background-color: rgb(24, 149, 233);
 }
 
 h2 {
