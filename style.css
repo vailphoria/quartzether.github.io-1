@@ -73,7 +73,9 @@ h2 {
 
 header {
 	width: 100%;
-	background-color: #000;
+	/*background-color: #000;*/
+	background-color: #ff1598;
+	background-image: linear-gradient(225deg, #ff1598 0%, #8250ac 53%, #37a2ec 100%);
 	height: 100px;
 	color: #fff;
 	padding: 20px;
