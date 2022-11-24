@@ -41,11 +41,13 @@ a {
 a:hover {
 	color: rgb(9, 26, 58);
 	background-color: rgb(211, 241, 255);
+	border-radius: 5px;
 }
 
 a.selected {
 	color: rgb(9, 26, 58);
-	background-color: rgb(24, 149, 233);
+	background-color: rgb(55, 149, 192);
+	border-radius: 5px;
 }
 
 h2 {
