@@ -1,0 +1,357 @@
+@import "normalize.scss"
+@import "reset.scss"
+
+$color_blue: #5290EA
+$color_orange: #F28B64
+$color_grey: #f0f0f0
+$circle_radius: 200px
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+@mixin rectangle
+    position: absolute
+    box-shadow: $shadow
+    border-radius: $circle_radius
+    
+
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: "MonsterratT"
+    src: url('../fonts/Montserrat-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+
+@font-face 
+    font-family: "MonsterratT"
+    src: url('../fonts/Montserrat-SemiBold.ttf')
+    font-weight: bold
+    font-style: normal
+
+
+html
+    font-family: "MonsterratT"
+    font-weight: regular
+
+
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    position: relative
+    height: 800px
+    background-color: $color_grey
+    padding-top: 16px
+    overflow: hidden
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 69px
+        align-items: center
+    &__logo
+        width: 134px
+        height: 69px
+    &__content-container
+        display: flex
+        flex-direction: row
+        position: relative
+    &__first-elipse
+        position: absolute
+        top: 129px
+        right: 34px
+    &__second-elipse
+        position: absolute
+        top: 600px
+        right: -110px
+
+.second-section
+    height: 700px
+    padding-top: 32px
+    overflow: hidden
+    &__container
+        position: relative
+    &__tittle
+        margin-bottom: 40px
+    &__card-box
+        height: 360px
+        margin-bottom: 25px
+    &__brave-icons
+        height: 98px
+    &__first-elipse
+        position: absolute
+        top: 31px
+        right: -60px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: 342px
+        left: -60px
+        z-index: -1
+
+.third-section
+    min-height: 640px
+    background-color: $color_grey
+    overflow: hidden
+    position: relative
+    &__container
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding-left: 12px
+        padding-top: 46px
+    &__left
+        margin-right: 88px
+    &__elipse
+        position: absolute
+        transform: rotate(-40deg)
+        top: -116px
+        right: -102px
+
+.footer-section
+    &__container
+        position: relative
+        min-height: 272px
+        display: flex
+        align-items: center
+        justify-content: flex-end 
+    &__tittle
+        padding-left: 10px
+        margin-bottom: 20px
+    &__grif
+        position: absolute
+        left: -250px
+        bottom: 0px
+
+
+
+.left-side
+    width: 542px
+    height: 319px
+    position: relative
+    &__substr
+        position: absolute
+        top: 89px
+    &__elipse
+        position: absolute
+        left: 97px
+    &__tittle
+        position: absolute
+        top: 127px
+        left: 155px
+
+
+.right-side
+    &__tittle
+        padding-left: 10px
+        line-height: 64.73px
+        margin-bottom: 20px
+    &__text
+        max-width: 479px
+        margin-bottom: 30px
+        font-size: 18px
+
+
+    
+
+
+.brave
+    display: flex
+    flex-direction: row
+    justify-content: center
+    &__item
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-right: 60px
+        &:last-child
+            margin-right: 0px
+        img
+            margin-right: 20px
+            max-width: 80px
+            max-height: 80px
+        &__text
+            h1
+                font-size: 48px
+                font-weight: bold
+            p
+                font-size: 18px
+
+.cards
+    display: flex
+    flex-direction: row
+    font-weight: bold
+    &__item
+        position: relative
+        width: 360px
+        border-radius: 10px
+        margin-right: 30px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        padding-top: 25px
+        display: flex
+        //flex-direction: row
+        align-items: flex-end
+        &:last-child
+            margin: 0 auto
+        &_blue
+            background: $color_blue
+        &_orange
+            background: $color_orange
+        &_grey
+            background: $color_grey
+        img
+            height: 335px
+        p
+            width: 280px
+            font-size: 36px
+            text-align: center
+            position: absolute
+            top: 144px
+            right: -40px
+            transform: rotate(90deg)
+
+
+
+.nav-menu
+    font-weight: bold
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px
+        a
+            text-decoration: none
+            color: black
+            
+.left-wrapper
+    position: relative
+    &__img
+        position: relative
+        z-index: 4
+    &__rectangle-blue
+        @include rectangle
+        width: 565.95px
+        height: 220px
+        left: -50px
+        top: 150px
+        background: $color_blue
+        transform: rotate(-64deg)
+        z-index: 2
+    &__rectangle-orange
+        @include rectangle
+        width: 618.43px
+        height: 220px
+        left: -30px
+        top: 160px
+        background: $color_orange
+        transform: rotate(-50.81deg)
+        z-index: 3
+    &__rectangle-grey
+        @include rectangle
+        width: 608.97px
+        height: 220px
+        left: 10px
+        top: 190px
+        background: #E2E2E2
+        transform: rotate(-36.15deg)
+        z-index: 1
+
+.right-wrapper
+    position: absolute
+    width: 372px
+    right: 76px
+    top: 150px
+    z-index: 5
+    &__icons-box
+        margin-bottom: 1px
+        padding-left: 10px
+    &__tittle
+        margin-bottom: 5px
+    &__text
+        font-size: 16px
+        max-width: 353px
+        margin-bottom: 20px
+
+.icons
+    display: inline-flex
+    &__item
+        display: flex
+        width: 40px
+        height: 40px
+        border: 1px solid $color_blue
+        border-radius: $circle_radius
+        margin-right: 17px
+        align-items: center
+        justify-content: center
+        &:last-child
+            margin: 0 auto   
+        i
+            font-size: 21px
+
+.tittle
+    position: relative
+    font-size: 72px
+    font-weight: bold
+    &__hr
+        width: 64px
+        position: absolute
+        margin: 0 auto
+        border: none
+        border-top: 1px solid black
+
+.buttons
+    display: inline-flex
+    &__my-btn
+        margin-right: 32px
+        width: 200px
+        height: 60px
+        background: $color_orange
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: $circle_radius
+        border: none
+        font-weight: bold
+        font-size: 18px
+        color: white
+
+    &__icon-btn
+        display: inline-flex
+        align-items: center
+        img
+            margin-right: 12px
+        &__text
+            font-size: 16px
+
+.elipse
+    width: 194px
+    height: 194px
+    background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+    border-radius: $circle_radius
+    display: flex
+    justify-content: center
+    align-items: center
+    &_big
+        width: 282px
+        height: 282px
+    &__substract
+        width: 129.33px
+        height: 129.33px
+        background: $color_grey
+        border-radius: $circle_radius
+        &_big
+            width: 188px
+            height: 188px
+        &_white
+            background: white
+
+
+
+
+
+
+
