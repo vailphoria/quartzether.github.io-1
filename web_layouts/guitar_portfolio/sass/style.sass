@@ -2,7 +2,9 @@
 @import "reset.scss"
 
 $color_blue: #5290EA
+$color_blue_hov: #6b99dd
 $color_orange: #F28B64
+$color_orange_hov: #f86f2f
 $color_grey: #f0f0f0
 $circle_radius: 200px
 $shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -199,7 +201,7 @@ html
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
         padding-top: 25px
         display: flex
-        //flex-direction: row
+        transition: 1s transform
         align-items: flex-end
         &:last-child
             margin: 0 auto
@@ -219,6 +221,8 @@ html
             top: 144px
             right: -40px
             transform: rotate(90deg)
+        &:hover
+            transform: scale(1.07)
 
 
 
@@ -230,11 +234,14 @@ html
     &__list-item
         margin-right: 64px
         font-size: 18px
+        transition: 0.4s transform
         &:last-child
             margin-right: 0px
         a
             text-decoration: none
             color: black
+        &:hover
+            transform: scale(1.12)
             
 .left-wrapper
     position: relative
@@ -296,10 +303,14 @@ html
         margin-right: 17px
         align-items: center
         justify-content: center
+        transition: 0.2s background
         &:last-child
             margin: 0 auto   
         i
             font-size: 21px
+        &:hover
+            background: $color_blue_hov
+            border: 1px solid #2265c9
 
 .tittle
     //position: relative
@@ -325,14 +336,24 @@ html
         font-weight: bold
         font-size: 18px
         color: white
+        transition-property: transform box-shadow background
+        transition-duration: 1s
+        &:hover
+            transform: scale(1.05)
+            box-shadow: 0px 5px 5px rgba(165, 221, 221, 0.582)
+            background: $color_orange_hov
 
     &__icon-btn
         display: inline-flex
         align-items: center
+        transition: 1s transform
         img
             margin-right: 12px
         &__text
             font-size: 16px
+        &:hover
+            transform: scale(1.1)
+        
 
 .elipse
     width: 194px
@@ -600,7 +621,7 @@ html
             visibility: hidden
 
     .second-section
-        min-height: 1270px
+        min-height: 1275px
         &__tittle
             font-size: 60px
         &__card-box
@@ -646,7 +667,7 @@ html
         align-content: center
         flex-wrap: wrap
         position: absolute
-        top: 1090px
+        top: 1105px
         left: 40px
         &__item
             margin-right: 0px

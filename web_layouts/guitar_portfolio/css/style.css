@@ -569,6 +569,7 @@ html {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-top: 25px;
   display: flex;
+  transition: 1s transform;
   align-items: flex-end;
 }
 .cards__item:last-child {
@@ -595,6 +596,9 @@ html {
   right: -40px;
   transform: rotate(90deg);
 }
+.cards__item:hover {
+  transform: scale(1.07);
+}
 
 .nav-menu {
   font-weight: bold;
@@ -606,6 +610,7 @@ html {
 .nav-menu__list-item {
   margin-right: 64px;
   font-size: 18px;
+  transition: 0.4s transform;
 }
 .nav-menu__list-item:last-child {
   margin-right: 0px;
@@ -613,6 +618,9 @@ html {
 .nav-menu__list-item a {
   text-decoration: none;
   color: black;
+}
+.nav-menu__list-item:hover {
+  transform: scale(1.12);
 }
 
 .left-wrapper {
@@ -691,12 +699,17 @@ html {
   margin-right: 17px;
   align-items: center;
   justify-content: center;
+  transition: 0.2s background;
 }
 .icons__item:last-child {
   margin: 0 auto;
 }
 .icons__item i {
   font-size: 21px;
+}
+.icons__item:hover {
+  background: #6b99dd;
+  border: 1px solid #2265c9;
 }
 
 .tittle {
@@ -725,16 +738,27 @@ html {
   font-weight: bold;
   font-size: 18px;
   color: white;
+  transition-property: transform box-shadow background;
+  transition-duration: 1s;
+}
+.buttons__my-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 5px rgba(165, 221, 221, 0.582);
+  background: #f86f2f;
 }
 .buttons__icon-btn {
   display: inline-flex;
   align-items: center;
+  transition: 1s transform;
 }
 .buttons__icon-btn img {
   margin-right: 12px;
 }
 .buttons__icon-btn__text {
   font-size: 16px;
+}
+.buttons__icon-btn:hover {
+  transform: scale(1.1);
 }
 
 .elipse {
@@ -1046,7 +1070,7 @@ html {
     visibility: hidden;
   }
   .second-section {
-    min-height: 1270px;
+    min-height: 1275px;
   }
   .second-section__tittle {
     font-size: 60px;
@@ -1100,7 +1124,7 @@ html {
     align-content: center;
     flex-wrap: wrap;
     position: absolute;
-    top: 1090px;
+    top: 1105px;
     left: 40px;
   }
   .brave__item {
